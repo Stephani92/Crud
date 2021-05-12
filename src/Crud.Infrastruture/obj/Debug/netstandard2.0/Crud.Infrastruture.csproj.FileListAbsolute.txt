@@ -1,0 +1,12 @@
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\bin\Debug\netstandard2.0\Crud.Infrastruture.deps.json
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\bin\Debug\netstandard2.0\Crud.Infrastruture.dll
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\bin\Debug\netstandard2.0\Crud.Infrastruture.pdb
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\bin\Debug\netstandard2.0\Crud.ApplicationCore.dll
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\bin\Debug\netstandard2.0\Crud.ApplicationCore.pdb
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\obj\Debug\netstandard2.0\Crud.Infrastruture.csprojAssemblyReference.cache
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\obj\Debug\netstandard2.0\Crud.Infrastruture.AssemblyInfoInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\obj\Debug\netstandard2.0\Crud.Infrastruture.AssemblyInfo.cs
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\obj\Debug\netstandard2.0\Crud.Infrastruture.csproj.CoreCompileInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\obj\Debug\netstandard2.0\Crud.Infrastruture.csproj.CopyComplete
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\obj\Debug\netstandard2.0\Crud.Infrastruture.dll
+C:\Users\steph\source\repos\Crud\src\Crud.Infrastruture\obj\Debug\netstandard2.0\Crud.Infrastruture.pdb

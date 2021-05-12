@@ -1,0 +1,9 @@
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\netstandard2.0\Crud.ApplicationCore.deps.json
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\netstandard2.0\Crud.ApplicationCore.dll
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\netstandard2.0\Crud.ApplicationCore.pdb
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\netstandard2.0\Crud.ApplicationCore.csprojAssemblyReference.cache
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\netstandard2.0\Crud.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\netstandard2.0\Crud.ApplicationCore.AssemblyInfo.cs
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\netstandard2.0\Crud.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\netstandard2.0\Crud.ApplicationCore.dll
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\netstandard2.0\Crud.ApplicationCore.pdb
