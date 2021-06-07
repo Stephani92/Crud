@@ -1,14 +1,23 @@
 using Crud.ApplicationCore.Interfaces.Repositories;
 using Crud.ApplicationCore.Interfaces.Services;
+using Crud.ApplicationCore.Services.Auth;
 using Crud.ApplicationCore.Services.Ef;
+using Crud.DTOS.Interfaces.Services.Auth;
 using Crud.Infrastruture.Data;
 using Crud.Infrastruture.Repositories.EF;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Security.Claims;
+using System.Text;
 
 namespace Crud.UI.Api
 {
@@ -28,11 +37,41 @@ namespace Crud.UI.Api
 			services.AddDbContext<CrudContext>(
 				x=>x.UseSqlServer(Configuration.GetConnectionString("Default"))
 				);
-			services.AddScoped<IRepository, EfRepository>();
-			services.AddScoped<IUsuarioRepository, UsuarioEfRepository>();
+			services.AddScoped<IRepository, DefaultEfRepository>();
+			services.AddScoped<IUsuarioEfRepository, UsuarioEfRepository>();
 			services.AddScoped<ICrudService, CrudService>();
 			services.AddScoped<IUsuarioService, UsuarioService>();
+			services.AddScoped<IIAuthService, AuthService>();
 			services.AddScoped<GlobalExceptionHandlerMiddleware>();
+			services.AddMvc(options =>
+			{
+				var policy = new AuthorizationPolicyBuilder()
+					.RequireAuthenticatedUser()
+					.Build();
+				options.Filters.Add(new AuthorizeFilter(policy));
+			});
+			services.AddAuthentication(x =>
+			{
+				x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+				x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+			})
+				.AddJwtBearer(options =>
+				{
+					options.RequireHttpsMetadata = false;
+					options.SaveToken = true;
+					options.TokenValidationParameters = new TokenValidationParameters
+					{
+						ValidateIssuerSigningKey = true,
+						IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII
+								.GetBytes("SuperSecretKeyssssssssssssssssssssssssssssss"))
+						,
+						ValidateIssuer = false,
+						ValidateAudience = false
+					};
+				}
+				);
+				
+				
 			//services.AddScoped<IRequest, Request>();
 			services.AddCors();
 
@@ -45,16 +84,18 @@ namespace Crud.UI.Api
 			{
 				app.UseDeveloperExceptionPage();
 			}
+			
 			app.UseRouting();
 			app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 			app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
-			//app.UseAuthorization();
+			app.UseAuthentication();
+			app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();
 			});
+
 		}
 	}
 }

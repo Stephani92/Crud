@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crud.Infrastruture", "src\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crud.Ui.Api", "src\Crud.Ui.Api_\Crud.Ui.Api.csproj", "{2BE52BF4-EA31-43E6-84D1-329DBABEF24D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud.DTOS", "src\Crud.DTOS\Crud.DTOS.csproj", "{F129333F-D44C-47A6-9A2E-4583B6563CBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2BE52BF4-EA31-43E6-84D1-329DBABEF24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BE52BF4-EA31-43E6-84D1-329DBABEF24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BE52BF4-EA31-43E6-84D1-329DBABEF24D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F129333F-D44C-47A6-9A2E-4583B6563CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F129333F-D44C-47A6-9A2E-4583B6563CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F129333F-D44C-47A6-9A2E-4583B6563CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F129333F-D44C-47A6-9A2E-4583B6563CBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{B14AD9B6-3283-4849-9655-9256AE04C37B} = {74B685DF-ECA3-4A3D-B1C5-EF8F3CB8A25D}
 		{66CD889F-8AB1-4FB7-BBA0-EF0EDCBF512A} = {679AB805-59F1-441A-BE12-9E6D686BFDAD}
 		{2BE52BF4-EA31-43E6-84D1-329DBABEF24D} = {FA5F21C0-22BE-4F1D-B0A0-9E21A7381404}
+		{F129333F-D44C-47A6-9A2E-4583B6563CBA} = {74B685DF-ECA3-4A3D-B1C5-EF8F3CB8A25D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4604ED5F-263D-4F15-9C45-E254E31D55B7}

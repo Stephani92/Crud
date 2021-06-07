@@ -1,4 +1,5 @@
-﻿using Crud.ApplicationCore.Entity;
+﻿
+
 using Crud.ApplicationCore.Interfaces.Repositories;
 using Crud.ApplicationCore.Interfaces.Services;
 

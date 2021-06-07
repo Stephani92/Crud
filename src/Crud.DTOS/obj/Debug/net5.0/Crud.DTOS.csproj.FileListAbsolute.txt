@@ -1,0 +1,12 @@
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\bin\Debug\net5.0\Crud.DTOS.deps.json
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\bin\Debug\net5.0\Crud.DTOS.dll
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\bin\Debug\net5.0\ref\Crud.DTOS.dll
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\bin\Debug\net5.0\Crud.DTOS.pdb
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\Crud.DTOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\Crud.DTOS.AssemblyInfoInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\Crud.DTOS.AssemblyInfo.cs
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\Crud.DTOS.csproj.CoreCompileInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\Crud.DTOS.dll
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\ref\Crud.DTOS.dll
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\Crud.DTOS.pdb
+C:\Users\steph\source\repos\Crud\src\Crud.DTOS\obj\Debug\net5.0\Crud.DTOS.csprojAssemblyReference.cache

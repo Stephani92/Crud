@@ -1,0 +1,15 @@
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\net5.0\Crud.ApplicationCore.deps.json
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\net5.0\Crud.ApplicationCore.dll
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\net5.0\ref\Crud.ApplicationCore.dll
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\net5.0\Crud.ApplicationCore.pdb
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\net5.0\Crud.DTOS.dll
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\bin\Debug\net5.0\Crud.DTOS.pdb
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.csprojAssemblyReference.cache
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.AssemblyInfo.cs
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.csproj.CopyComplete
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.dll
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\ref\Crud.ApplicationCore.dll
+C:\Users\steph\source\repos\Crud\src\Crud.ApplicationCore\obj\Debug\net5.0\Crud.ApplicationCore.pdb
