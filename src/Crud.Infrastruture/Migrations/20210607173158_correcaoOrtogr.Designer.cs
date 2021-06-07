@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Crud.Infrastruture.Migrations
 {
     [DbContext(typeof(CrudContext))]
-    [Migration("20210607051034_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210607173158_correcaoOrtogr")]
+    partial class correcaoOrtogr
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -129,7 +129,7 @@ namespace Crud.Infrastruture.Migrations
                     b.Property<string>("Placa")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("AnoDeFabricação")
+                    b.Property<DateTime>("AnoDeFabricacao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Cor")
@@ -148,10 +148,12 @@ namespace Crud.Infrastruture.Migrations
 
             modelBuilder.Entity("Crud.DTOS.Entity.VeiculoCondutores", b =>
                 {
-                    b.Property<string>("VeiculoPlaca")
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CondutorCpf")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DataCompra")
@@ -160,9 +162,15 @@ namespace Crud.Infrastruture.Migrations
                     b.Property<DateTime?>("DataVenda")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("VeiculoPlaca", "CondutorCpf");
+                    b.Property<string>("VeiculoPlaca")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("CondutorCpf");
+
+                    b.HasIndex("VeiculoPlaca");
 
                     b.ToTable("VeiculoCondutores");
                 });

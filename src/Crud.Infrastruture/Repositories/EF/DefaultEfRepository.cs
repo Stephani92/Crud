@@ -14,7 +14,7 @@ namespace Crud.Infrastruture.Repositories.EF
 		public DefaultEfRepository(CrudContext _data)
 		{
 			data = _data;
-
+			data.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
 		}
 		
 		

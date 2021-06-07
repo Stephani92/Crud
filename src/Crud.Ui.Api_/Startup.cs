@@ -17,9 +17,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Security.Claims;
+using Newtonsoft.Json;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Crud.UI.Api
 {
@@ -37,7 +37,9 @@ namespace Crud.UI.Api
 		{
 			services.AddControllers();
 			services.AddDbContext<CrudContext>(
-				x=>x.UseSqlServer(Configuration.GetConnectionString("Default"))
+				x=> { x.UseSqlServer(Configuration.GetConnectionString("Default"));
+						}
+
 				);
 			services.AddScoped<IRepository, DefaultEfRepository>();
 			services.AddScoped<IUsuarioEfRepository, UsuarioEfRepository>();
@@ -49,6 +51,12 @@ namespace Crud.UI.Api
 			services.AddScoped<IVeiculoService, VeiculoService>();
 			services.AddScoped<IVeiculoCondutorService, VeiculoCondutorService>();
 			services.AddScoped<GlobalExceptionHandlerMiddleware>();
+
+			JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+			{
+				Formatting = Newtonsoft.Json.Formatting.Indented,
+				ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+			};
 			services.AddMvc(options =>
 			{
 				var policy = new AuthorizationPolicyBuilder()
@@ -76,8 +84,6 @@ namespace Crud.UI.Api
 					};
 				}
 				);
-				
-				
 			//services.AddScoped<IRequest, Request>();
 			services.AddCors();
 

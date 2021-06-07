@@ -4,14 +4,16 @@ using Crud.Infrastruture.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Crud.Infrastruture.Migrations
 {
     [DbContext(typeof(CrudContext))]
-    partial class CrudContextModelSnapshot : ModelSnapshot
+    [Migration("20210607171519_SeedInicio")]
+    partial class SeedInicio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -127,7 +129,7 @@ namespace Crud.Infrastruture.Migrations
                     b.Property<string>("Placa")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("AnoDeFabricacao")
+                    b.Property<DateTime>("AnoDeFabricação")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Cor")
@@ -147,7 +149,6 @@ namespace Crud.Infrastruture.Migrations
             modelBuilder.Entity("Crud.DTOS.Entity.VeiculoCondutores", b =>
                 {
                     b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CondutorCpf")

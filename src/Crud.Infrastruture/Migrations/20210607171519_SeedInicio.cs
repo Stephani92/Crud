@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Crud.Infrastruture.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class SeedInicio : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -92,14 +92,15 @@ namespace Crud.Infrastruture.Migrations
                 name: "VeiculoCondutores",
                 columns: table => new
                 {
-                    VeiculoPlaca = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    CondutorCpf = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DataVenda = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    DataCompra = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DataCompra = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    VeiculoPlaca = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    CondutorCpf = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_VeiculoCondutores", x => new { x.VeiculoPlaca, x.CondutorCpf });
+                    table.PrimaryKey("PK_VeiculoCondutores", x => x.Id);
                     table.ForeignKey(
                         name: "FK_VeiculoCondutores_Condutores_CondutorCpf",
                         column: x => x.CondutorCpf,
@@ -143,6 +144,11 @@ namespace Crud.Infrastruture.Migrations
                 name: "IX_VeiculoCondutores_CondutorCpf",
                 table: "VeiculoCondutores",
                 column: "CondutorCpf");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VeiculoCondutores_VeiculoPlaca",
+                table: "VeiculoCondutores",
+                column: "VeiculoPlaca");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

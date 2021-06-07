@@ -32,12 +32,12 @@ namespace Crud.Ui.Api.Controllers
 			return Ok(VeiculosCondutores);
 		}
 		[HttpPost("GetHistorioCondutoresVeiculo")]
-		public Condutor GetHistorioCondutoresVeiculo(string Cpf)
+		public Condutor GetHistorioCondutoresVeiculo([FromBody] string Cpf)
 		{
 			return VeiculoCondutorService.GetHistorioCondutoresVeiculo(Cpf);
 		}
 		[HttpPost("GetHistorioVeiculoCondutores")]
-		public Veiculo GetHistorioVeiculoCondutores(string Placa)
+		public Veiculo GetHistorioVeiculoCondutores([FromBody] string Placa)
 		{
 			return VeiculoCondutorService.GetHistorioVeiculoCondutores(Placa);
 		}

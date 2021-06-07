@@ -13,6 +13,7 @@ namespace Crud.Infrastruture.Data
     {
         public CrudContext(DbContextOptions<CrudContext> options) : base(options)
         {
+          
         }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Role> Roles { get; set; }
@@ -50,5 +51,5 @@ namespace Crud.Infrastruture.Data
 
 
 		}
-	}
+    }
 }

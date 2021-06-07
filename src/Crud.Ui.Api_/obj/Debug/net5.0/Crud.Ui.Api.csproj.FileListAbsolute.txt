@@ -135,3 +135,6 @@ C:\Users\steph\source\repos\Crud\src\Crud.Ui.Api_\obj\Debug\net5.0\Crud.Ui.Api.p
 C:\Users\steph\source\repos\Crud\src\Crud.Ui.Api_\obj\Debug\net5.0\Crud.Ui.Api.genruntimeconfig.cache
 C:\Users\steph\source\repos\Crud\src\Crud.Ui.Api_\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Users\steph\source\repos\Crud\src\Crud.Ui.Api_\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\steph\source\repos\Crud\src\Crud.Ui.Api_\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\steph\source\repos\Crud\src\Crud.Ui.Api_\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\steph\source\repos\Crud\src\Crud.Ui.Api_\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll

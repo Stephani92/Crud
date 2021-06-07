@@ -53,7 +53,7 @@ namespace Crud.Infrastruture.EntityConfig
 		public void Configure(EntityTypeBuilder<VeiculoCondutores> builder)
 		{
 
-			builder.HasKey(ur => new { ur.VeiculoPlaca, ur.CondutorCpf});
+			builder.HasKey(ur => ur.Id);
 			builder.HasOne(ur => ur.Condutor).WithMany(ur => ur.HistoricoVeiculo).HasForeignKey(ur => ur.CondutorCpf).IsRequired();
 			builder.HasOne(ur => ur.Veiculo).WithMany(ur => ur.HistoricoVeiculo).HasForeignKey(ur => ur.VeiculoPlaca).IsRequired();
 		}
