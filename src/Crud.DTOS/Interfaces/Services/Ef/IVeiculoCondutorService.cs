@@ -1,4 +1,5 @@
 ﻿using Crud.ApplicationCore.Interfaces.Services;
+using Crud.DTOS.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,7 @@ namespace Crud.DTOS.Interfaces.Services.Ef
 {
 	public interface IVeiculoCondutorService: ICrudService
 	{
+		Veiculo GetHistorioVeiculoCondutores(string placa);
+		Condutor GetHistorioCondutoresVeiculo(string CPF);
 	}
 }

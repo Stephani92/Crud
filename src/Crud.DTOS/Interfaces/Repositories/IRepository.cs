@@ -8,7 +8,7 @@ namespace Crud.ApplicationCore.Interfaces.Repositories
     {
 		
 		void Add<T>(T entity) where T:class;
-        void Delete<T>(int id)where T:class;
+        void Delete<T>(string id)where T:class;
         void Update<T>(T entity) where T : class;
         dynamic SaveChangesAsync();
         T GetAsyncById<T>(string Id) where T : class;

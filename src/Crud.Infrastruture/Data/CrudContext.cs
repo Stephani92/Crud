@@ -45,7 +45,7 @@ namespace Crud.Infrastruture.Data
             //Seed
             mb.Entity<Role>().HasData(new Role("Master"), new Role("ADM"));
 			mb.Entity<Usuario>().HasData(new Usuario("Master", "tecnico", "master.tecnico@gmail.com", CripAlgoritmo.Criptografar("12345789")));
-			mb.Entity<UserRole>().HasData(new UserRole("boechat.stephani@gmail.com", "Master"));
+			mb.Entity<UserRole>().HasData(new UserRole("master.tecnico@gmail.com", "Master"));
 
 
 

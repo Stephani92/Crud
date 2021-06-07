@@ -22,7 +22,7 @@ namespace Crud.ApplicationCore.Services.Ef
 			return efRepository.SaveChangesAsync();
 		}
 
-		public dynamic delete<T>(int entity) where T : class
+		public dynamic delete<T>(string entity) where T : class
 		{
 			efRepository.Delete<T>(entity);
 			return efRepository.SaveChangesAsync();

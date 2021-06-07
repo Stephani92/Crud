@@ -36,6 +36,7 @@ namespace Crud.DTOS.Entity
         [Required(ErrorMessage = "O email deve ser preeenchido")]
         public string Email { get;  set; }
         [Required(ErrorMessage = "O data de nascimento deve ser preeenchido")]
+        public DateTime dataDenascimento { get; set; }
         public List<UserRole> UserRole { get;  set; }
 
     }

@@ -37,7 +37,7 @@ namespace Crud.Infrastruture.EntityConfig
 		public void Configure(EntityTypeBuilder<Condutor> builder)
 		{
 
-			builder.HasKey(ur => new {ur.CPF, ur.CNH});
+			builder.HasKey(ur => ur.CPF);
 		}
 	}
 	public class VeiculoMap : IEntityTypeConfiguration<Veiculo>
@@ -53,9 +53,9 @@ namespace Crud.Infrastruture.EntityConfig
 		public void Configure(EntityTypeBuilder<VeiculoCondutores> builder)
 		{
 
-			builder.HasKey(ur => new { ur.Veiculo.Placa, ur.Condutor.CPF});
-			builder.HasOne(ur => ur.Condutor).WithMany(ur => ur.HistoricoVeiculo).HasForeignKey(ur => ur.Condutor.CPF).IsRequired();
-			builder.HasOne(ur => ur.Veiculo).WithMany(ur => ur.HistoricoVeiculo).HasForeignKey(ur => ur.Veiculo.Placa).IsRequired();
+			builder.HasKey(ur => new { ur.VeiculoPlaca, ur.CondutorCpf});
+			builder.HasOne(ur => ur.Condutor).WithMany(ur => ur.HistoricoVeiculo).HasForeignKey(ur => ur.CondutorCpf).IsRequired();
+			builder.HasOne(ur => ur.Veiculo).WithMany(ur => ur.HistoricoVeiculo).HasForeignKey(ur => ur.VeiculoPlaca).IsRequired();
 		}
 	}
 	

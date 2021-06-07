@@ -23,7 +23,7 @@ namespace Crud.Infrastruture.Repositories.EF
 			data.Set<T>().Add(entity);
 		}
 
-		public void Delete<T>(int id) where T : class
+		public void Delete<T>(string id) where T : class
 		{
 			T ToDelete = data.Set<T>().FindAsync(id).Result;
 			data.Set<T>().Remove(ToDelete);

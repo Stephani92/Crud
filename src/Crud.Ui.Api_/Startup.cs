@@ -2,7 +2,9 @@ using Crud.ApplicationCore.Interfaces.Repositories;
 using Crud.ApplicationCore.Interfaces.Services;
 using Crud.ApplicationCore.Services.Auth;
 using Crud.ApplicationCore.Services.Ef;
+using Crud.DTOS.Interfaces.Repositories;
 using Crud.DTOS.Interfaces.Services.Auth;
+using Crud.DTOS.Interfaces.Services.Ef;
 using Crud.Infrastruture.Data;
 using Crud.Infrastruture.Repositories.EF;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -42,6 +44,10 @@ namespace Crud.UI.Api
 			services.AddScoped<ICrudService, CrudService>();
 			services.AddScoped<IUsuarioService, UsuarioService>();
 			services.AddScoped<IIAuthService, AuthService>();
+			services.AddScoped<IVeiculoCondutorEfRepository, VeiculoCondutorEfRepository>();
+			services.AddScoped<ICondutoresService, CondutoresService>();
+			services.AddScoped<IVeiculoService, VeiculoService>();
+			services.AddScoped<IVeiculoCondutorService, VeiculoCondutorService>();
 			services.AddScoped<GlobalExceptionHandlerMiddleware>();
 			services.AddMvc(options =>
 			{

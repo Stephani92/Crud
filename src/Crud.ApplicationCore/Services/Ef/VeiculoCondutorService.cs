@@ -1,13 +1,13 @@
 ﻿using Crud.ApplicationCore.Interfaces.Repositories;
 using Crud.ApplicationCore.Interfaces.Services;
 using Crud.DTOS.Entity;
-using Crud.DTOS.Entity.Dtos;
 using Crud.DTOS.Interfaces.Repositories;
+using Crud.DTOS.Interfaces.Services.Ef;
 using System;
 
 namespace Crud.ApplicationCore.Services.Ef
 {
-	public class VeiculoCondutorService : CrudService, ICrudService
+	public class VeiculoCondutorService : CrudService, IVeiculoCondutorService
 	{
 		private readonly IVeiculoCondutorEfRepository _condutorEfRepository;
 
@@ -17,11 +17,11 @@ namespace Crud.ApplicationCore.Services.Ef
 			_condutorEfRepository = condutorEfRepository;
 		}
 
-		public void AddVeiculoCondutores(VeiculosCondutoresDto veiculosCondutoresDto)
+		public void AddVeiculoCondutores(VeiculoCondutores veiculosCondutoresDto)
 		{
-			var condutor = efRepository.GetAsyncById<Condutor>(veiculosCondutoresDto.CPF);
+			var condutor = GetAsyncById<Condutor>(veiculosCondutoresDto.CondutorCpf);
 			if (condutor is null) throw new ArgumentException("Condutor não cadastrado");
-			var veiculo = efRepository.GetAsyncById<Veiculo>(veiculosCondutoresDto.Placa);
+			var veiculo = GetAsyncById<Veiculo>(veiculosCondutoresDto.VeiculoPlaca);
 			if (veiculo is null) throw new ArgumentException("Veiculo não cadastrado");
 
 			Add(new VeiculoCondutores() 
@@ -34,13 +34,12 @@ namespace Crud.ApplicationCore.Services.Ef
 			);
 		}
 
-		public void UpdateVeiculoCondutores(VeiculosCondutoresDto veiculosCondutoresDto)
+		public void UpdateVeiculoCondutores(VeiculoCondutores veiculosCondutoresDto)
 		{
-			var VeiculoCondutor = efRepository.GetAsyncById<VeiculoCondutores>( veiculosCondutoresDto.Placa + veiculosCondutoresDto.CPF);
+			var VeiculoCondutor = GetAsyncById<VeiculoCondutores>( veiculosCondutoresDto.VeiculoPlaca + veiculosCondutoresDto.CondutorCpf);
 			if (VeiculoCondutor is null) throw new ArgumentException("Registro não cadastrado");
 			VeiculoCondutor.DataVenda = veiculosCondutoresDto.DataVenda;
-			efRepository.Update(VeiculoCondutor);
-			efRepository.SaveChangesAsync();
+			Update(VeiculoCondutor);
 		}
 		public Condutor GetHistorioCondutoresVeiculo(string Cpf)
 		{
